@@ -121,7 +121,7 @@ function build(names, tags, maps, cvars) {
 				callback(null, info, rules);
 			});
 		});
-	}, 200);
+	}, 50);
 	
 	var processed = 0;
 	var dead = 0;
