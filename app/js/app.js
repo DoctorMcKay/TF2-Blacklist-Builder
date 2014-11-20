@@ -9,6 +9,7 @@ function getElements(selector) {
 var DEBUG = true;
 
 var g_ServerList;
+var g_Version = require('./package.json').version;
 
 var request = require('request');
 var SourceQuery = require('sourcequery');
@@ -20,6 +21,8 @@ document.addEventListener("DOMContentLoaded", function() {
 	if(DEBUG) {
 		win.showDevTools();
 	}
+	
+	document.title = "TF2 Blacklist Builder v" + g_Version;
 	
 	win.setProgressBar(2); // Indeterminate progress bar
 	
@@ -178,7 +181,7 @@ function build(names, tags, maps, cvars) {
 			var progress = processed / g_ServerList.servers.length;
 			win.setProgressBar(progress);
 			getElement('progress').value = progress;
-			document.title = "TF2 Blacklist Builder (" + Math.round(progress * 100) + "%)";
+			document.title = "TF2 Blacklist Builder v" + g_Version + " (" + Math.round(progress * 100) + "%)";
 		});
 	});
 	

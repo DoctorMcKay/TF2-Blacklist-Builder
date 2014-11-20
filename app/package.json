@@ -1,5 +1,6 @@
 {
 	"name": "tf2-blacklist-builder",
+	"version": "1.0",
 	"main": "main.html",
 	"window": {
 		"toolbar": false,
