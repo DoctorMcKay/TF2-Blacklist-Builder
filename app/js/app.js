@@ -6,7 +6,7 @@ function getElements(selector) {
 	return Array.prototype.slice.call(document.querySelectorAll(selector), 0);
 }
 
-var DEBUG = true;
+var DEBUG = false;
 
 var g_ServerList;
 var g_Version = require('./package.json').version;
