@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>TF2 Blacklist Builder</title>
+		<link rel="stylesheet" href="css/style.css" />
+		<script src="js/app.js"></script>
+	</head>
+	<body>
+		<progress></progress>
+		<div id="loading">
+			Loading...
+		</div>
+		<div id="main-view">
+			<p id="progress-text">Please select filters and click "Generate" to build a blacklist.</p>
+			
+			<label for="name-contains">Name Contains</label>
+			<input type="text" id="name-contains" placeholder="Separate multiple values with commas." />
+			
+			<label for="tags">Has Tag</label>
+			<input type="text" id="tags" placeholder="Separate with commas. Servers with ANY tag specified will be included." />
+			
+			<label for="map">Map Contains</label>
+			<input type="text" id="map" placeholder="Separate with commas." />
+			
+			<label for="cvars">Public ConVars</label>
+			<input type="text" id="cvars" placeholder="Used to test for plugins or game settings. cvar=value to blacklist a value." />
+			
+			<br /><br />
+			<label for="quickadd">Quick-Add</label>
+			<select id="quickadd">
+				<option value=""></option>
+				<option value="cvars:sm_motdredirect_version">Pinion Adverts</option>
+				<option value="cvars:sm_motdgd_version">MOTDgd Adverts</option>
+				<option value="name-contains:Saigns">Saigns</option>
+				<option value="name-contains:nighteam">NighTeam</option>
+				<option value="name-contains:trade;tags:trade;map:trade">Trade Servers</option>
+				<option value="name-contains:idle;tags:idle;map:idle">Idle Servers</option>
+				<option value="tags:norespawntime;cvars:mp_disable_respawn_times=1">Instant Respawn</option>
+				<option value="cvars:mp_tournament=1">Tournament Mode</option>
+				<option value="cvars:tf_teamtalk=0">No Gravetalk</option>
+				<option value="cvars:sv_password=1">Password-Protected</option>
+			</select>
+			
+			<button id="generate">Generate</button>
+		</div>
+		<input type="file" id="save" nwsaveas="server_blacklist.txt" />
+	</body>
+</html>

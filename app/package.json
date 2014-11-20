@@ -1,0 +1,10 @@
+{
+	"name": "tf2-blacklist-builder",
+	"main": "main.html",
+	"window": {
+		"toolbar": false,
+		"width": 600,
+		"height": 300,
+		"resizable": false
+	}
+}

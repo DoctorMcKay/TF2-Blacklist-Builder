@@ -1,0 +1,87 @@
+html {
+	background-color: #ccc;
+}
+
+body {
+	font-family: Verdana, Arial, sans-serif;
+	font-size: 12px;
+	-webkit-user-select: none;
+	cursor: default;
+}
+
+progress {
+	-webkit-appearance: none;
+}
+
+progress::-webkit-progress-bar {
+	background-color: #eee;
+	border-radius: 2px;
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25) inset;
+	position: relative;
+}
+
+progress::-webkit-progress-value {
+	height: 90%;
+	position: absolute;
+	bottom: 0;
+	border-radius: 2px;
+	background-image: -webkit-linear-gradient(top, rgba(255, 255, 255, .25), rgba(0, 0, 0, .25));
+}
+
+progress:indeterminate::-webkit-progress-value {
+	width: 10% !important;
+	position: absolute;
+	left: 0%;
+	-webkit-animation: bouncing-bar 3s ease-in-out infinite alternate;
+}
+
+@-webkit-keyframes bouncing-bar {
+	0% {
+		left: 1%;
+	}
+	
+	100% {
+		left: 89%;
+	}
+}
+
+progress {
+	width: 100%;
+	margin: 10px 0;
+}
+
+#loading {
+	margin-top: 50px;
+	text-align: center;
+	font-size: 32px;
+	font-weight: bold;
+}
+
+#main-view, #save {
+	display: none;
+}
+
+#progress-text {
+	margin-top: 0;
+}
+
+label {
+	width: 120px;
+	text-align: right;
+	display: inline-block;
+}
+
+input, select {
+	width: 455px;
+}
+
+#generate {
+	width: 580px;
+	height: 50px;
+	position: absolute;
+	bottom: 10px;
+	left: 10px;
+	font-weight: bold;
+	font-size: 24px;
+	margin: 0 auto;
+}
